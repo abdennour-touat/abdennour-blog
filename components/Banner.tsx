@@ -1,5 +1,3 @@
-import React from "react";
-
 const Banner = () => {
   return (
     <aside className="flex justify-between items-center bg-yellow-400 border-y border-black py-10 lg:py-0 max-w-7xl mx-auto">
