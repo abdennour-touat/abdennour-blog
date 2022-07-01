@@ -15,6 +15,7 @@ export interface Post {
   };
   title: string;
   body: [object];
+  _createdAt: string;
 }
 export interface Props {
   posts: Post[];
