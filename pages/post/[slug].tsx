@@ -8,6 +8,7 @@ import BlogContent from "../../components/BlogContent";
 import CommentSection from "../../components/CommentSection";
 
 const Post = ({ post }: PostProps) => {
+  console.log(post);
   return (
     <>
       <Head>
@@ -54,6 +55,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         author->{
         name,
         image
+      },
+      "comments":*[
+        _type== "comment" && approuved == true 
+        && post._ref == ^._id
+      ]{
+          _createdAt,
+          name,
+          email,
+          comment,
+          _id  
       },
       mainImage,
       body,

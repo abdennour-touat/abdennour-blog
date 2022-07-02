@@ -1,3 +1,5 @@
+import Comments from "./components/Comments";
+
 export interface Post {
   _id: string;
   description: string;
@@ -5,6 +7,7 @@ export interface Post {
     image: string;
     name: string;
   };
+  comments: [Comment];
   mainImage: {
     assets: {
       _ref: string;
@@ -29,4 +32,15 @@ export interface FormInput {
   name: string;
   email: string;
   comment: string;
+}
+export interface Comment {
+  _createdAt: string;
+  _id: string;
+  comment: string;
+  email: string;
+  name: string;
+}
+
+export interface CommentsProps {
+  comments: Comment[];
 }
