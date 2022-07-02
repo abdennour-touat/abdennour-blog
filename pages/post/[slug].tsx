@@ -3,11 +3,11 @@ import Head from "next/head";
 import Header from "../../components/Header";
 import { sanityClient, urlFor } from "../../sanity";
 import { Post, PostProps } from "../../typing";
-import PortableText from "react-portable-text";
+
 import BlogContent from "../../components/BlogContent";
+import CommentSection from "../../components/CommentSection";
 
 const Post = ({ post }: PostProps) => {
-  console.log(post.body);
   return (
     <>
       <Head>
@@ -23,6 +23,8 @@ const Post = ({ post }: PostProps) => {
           />
         </header>
         <BlogContent post={post} />
+        <hr className="max-w-lg my-5 mx-auto border border-black" />
+        <CommentSection post={post} />
       </main>
     </>
   );

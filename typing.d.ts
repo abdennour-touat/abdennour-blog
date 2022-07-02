@@ -23,3 +23,10 @@ export interface Props {
 export interface PostProps {
   post: Post;
 }
+
+export interface FormInput {
+  _id: string;
+  name: string;
+  email: string;
+  comment: string;
+}
